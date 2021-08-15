@@ -18,9 +18,16 @@
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
-        <ToggleButton Style="{StaticResource ToggleButtonMenuStyle}"
+        <Label Grid.Column="0" Grid.Row="0"
+               HorizontalAlignment="Left"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center"
+               Height="50" Width="12" Margin="19,5,5,5" 
+               Content="" FontFamily="Segoe MDL2 Assets"/>
+        <ToggleButton x:Name="tgglBtnMenu"
+                      Style="{StaticResource ToggleButtonMenuStyle}"
                       Grid.Column="0" Grid.Row="0"
-                      HorizontalAlignment="Left"
+                      HorizontalAlignment="Right"
                       VerticalAlignment="Top"
                       Height="50" Width="50" Margin="5" 
                       Content="" FontFamily="Segoe MDL2 Assets"
@@ -49,7 +56,5 @@
             <RadioButton Style="{StaticResource RadioButtonMenuStyle}" Content="Home" Tag=""/>
             <RadioButton Style="{StaticResource RadioButtonMenuStyle}" Content="Setting" Tag=""/>
         </StackPanel>
-
-
     </Grid>
 </UserControl>
