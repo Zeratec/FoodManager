@@ -30,6 +30,7 @@
                     <BeginStoryboard>
                         <Storyboard x:Name="ShowMenu">
                             <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="60" To="200" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetName="stackPanelRadioBtn" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="60" To="200" Duration="0:0:0.2"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -37,13 +38,14 @@
                     <BeginStoryboard>
                         <Storyboard x:Name="HideMenu">
                             <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="200" To="60" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetName="stackPanelRadioBtn" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="200" To="60" Duration="0:0:0.2"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
             </ToggleButton.Triggers>
         </ToggleButton>
 
-        <StackPanel Grid.Row="1" Width="200">
+        <StackPanel x:Name="stackPanelRadioBtn" Grid.Row="1" Width="60">
             <RadioButton Style="{StaticResource RadioButtonMenuStyle}" Content="Home" Tag=""/>
             <RadioButton Style="{StaticResource RadioButtonMenuStyle}" Content="Setting" Tag=""/>
         </StackPanel>
