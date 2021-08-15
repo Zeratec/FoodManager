@@ -1,0 +1,41 @@
+﻿<Application x:Class="FoodManager.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FoodManager"
+             xmlns:vm="clr-namespace:FoodManager.ViewModels"
+             xmlns:v="clr-namespace:FoodManager.Views"
+             StartupUri="Views/MainWindow.xaml">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Resources Theme -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Themes/MenuTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Background Color -->
+            <SolidColorBrush x:Key="PrimaryBackgroundColor" Color="#f3f3f3" />
+            <SolidColorBrush x:Key="SecundaryBackgroundColor" Color="#f9f9f9" />
+
+            <!-- Primary Color -->
+            <SolidColorBrush x:Key="PrimaryBlueColor" Color="#587fff" />
+            <SolidColorBrush x:Key="PrimaryGrayColor" Color="#bfbfc4" />
+
+            <!-- Secundary Color -->
+            <SolidColorBrush x:Key="SecundaryBlueColor" Color="#cee8f8" />
+            <SolidColorBrush x:Key="SecundaryGrayColor" Color="#eeeeee" />
+
+            <!-- Typography Color -->
+            <SolidColorBrush x:Key="PrimaryTextColor" Color="#020f16" />
+            <SolidColorBrush x:Key="SecundaryTextColor" Color="#434344" />
+
+            <!-- Icons Color -->
+            <SolidColorBrush x:Key="ActionIconColor" Color="#434344" />
+
+            <!-- Resources Template -->
+            <DataTemplate x:Name="MenuDataTemplate" DataType="{x:Type vm:MenuViewModel}">
+                <v:MenuView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
