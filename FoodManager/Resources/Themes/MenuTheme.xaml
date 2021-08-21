@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Key="ToggleButtonMenuStyle" TargetType="{x:Type ToggleButton}">
+        <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
@@ -15,9 +16,11 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="False">
                             <Setter Property="Background" TargetName="border" Value="Transparent"/>
+                            <Setter Property="Content"  Value=""/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="true">
                             <Setter Property="Background" TargetName="border" Value="Transparent"/>
+                            <Setter Property="Content"  Value=""/>
                         </Trigger>
 
 
@@ -86,5 +89,10 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style x:Key="TextBlockAvatarMenuStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource SecundaryTextColor}"/>
     </Style>
 </ResourceDictionary>

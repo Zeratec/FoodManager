@@ -16,21 +16,22 @@
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0"
+        <!--<Label Grid.Column="0" Grid.Row="0"
                HorizontalAlignment="Left"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"
                Height="50" Width="12" Margin="19,5,5,5" 
-               Content="" FontFamily="Segoe MDL2 Assets"/>
+               Content="" FontFamily="Segoe MDL2 Assets"/>-->
         <ToggleButton x:Name="tgglBtnMenu"
                       Style="{StaticResource ToggleButtonMenuStyle}"
                       Grid.Column="0" Grid.Row="0"
                       HorizontalAlignment="Right"
                       VerticalAlignment="Top"
                       Height="50" Width="50" Margin="5" 
-                      Content="" FontFamily="Segoe MDL2 Assets"
+                      
                       IsChecked="False">
             <ToggleButton.Triggers>
                 <EventTrigger RoutedEvent="ToggleButton.Checked">
@@ -38,6 +39,8 @@
                         <Storyboard x:Name="ShowMenu">
                             <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="60" To="200" Duration="0:0:0.2"/>
                             <DoubleAnimation Storyboard.TargetName="stackPanelRadioBtn" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="60" To="200" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetName="stackPanelRadioBtnSetting" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="60" To="200" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetName="gridAvatar" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="60" To="200" Duration="0:0:0.2"/>                            
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -46,6 +49,8 @@
                         <Storyboard x:Name="HideMenu">
                             <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="200" To="60" Duration="0:0:0.2"/>
                             <DoubleAnimation Storyboard.TargetName="stackPanelRadioBtn" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="200" To="60" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetName="stackPanelRadioBtnSetting" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="200" To="60" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetName="gridAvatar" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="200" To="60" Duration="0:0:0.2"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -53,8 +58,43 @@
         </ToggleButton>
 
         <StackPanel x:Name="stackPanelRadioBtn" Grid.Row="1" Width="60">
-            <RadioButton Style="{StaticResource RadioButtonMenuStyle}" Content="Home" Tag=""/>
-            <RadioButton Style="{StaticResource RadioButtonMenuStyle}" Content="Setting" Tag=""/>
+            <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Home" Tag="" Visibility="Visible"/>
+            <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Graphic" Tag="" Visibility="Visible"/>
         </StackPanel>
+
+        <StackPanel x:Name="stackPanelRadioBtnSetting" Grid.Row="2" Width="60">
+            <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Setting" Tag="" Visibility="Visible"/>
+        </StackPanel>
+
+        <Grid x:Name="gridAvatar" Grid.Row="3" Width="60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Ellipse Grid.Column="0" Height="45" Width="45">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{StaticResource ResourceKey=avatar}"/>
+                </Ellipse.Fill>
+            </Ellipse>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource TextBlockAvatarMenuStyle}" Text="AUBRET" FontWeight="Bold" FontSize="16"/>
+                <TextBlock Style="{StaticResource TextBlockAvatarMenuStyle}" Text=" "/>
+                <TextBlock Style="{StaticResource TextBlockAvatarMenuStyle}" Text="Thomas" FontSize="14"/>
+            </StackPanel>
+            
+            
+        </Grid>        
+        
+        <!--<StackPanel x:Name="stackPanelAvatar" Grid.Row="2" Width="45"
+                    Orientation="Vertical" VerticalAlignment="Center">
+            <Ellipse Height="45" Tag="Thomas AUBRET">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{StaticResource ResourceKey=avatar}"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </StackPanel>--> 
+        
     </Grid>
 </UserControl>

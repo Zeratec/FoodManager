@@ -32,6 +32,9 @@
             <!-- Icons Color -->
             <SolidColorBrush x:Key="ActionIconColor" Color="#434344" />
 
+            <!-- Ressources Images -->
+            <BitmapImage x:Key="avatar" UriSource="/Resources/Icons/AUBRET_Th.jpeg"/>
+            
             <!-- Resources Template -->
             <DataTemplate x:Name="MenuDataTemplate" DataType="{x:Type vm:MenuViewModel}">
                 <v:MenuView/>
