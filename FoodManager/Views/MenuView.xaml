@@ -15,7 +15,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="45"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
@@ -59,7 +59,7 @@
 
         <StackPanel x:Name="stackPanelRadioBtn" Grid.Row="1" Width="60">
             <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Home" Tag="" Visibility="Visible"/>
-            <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Graphic" Tag="" Visibility="Visible"/>
+            <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Graphic" Tag="" Visibility="Visible"/>
         </StackPanel>
 
         <StackPanel x:Name="stackPanelRadioBtnSetting" Grid.Row="2" Width="60">
@@ -82,9 +82,7 @@
                 <TextBlock Style="{StaticResource TextBlockAvatarMenuStyle}" Text="AUBRET" FontWeight="Bold" FontSize="16"/>
                 <TextBlock Style="{StaticResource TextBlockAvatarMenuStyle}" Text=" "/>
                 <TextBlock Style="{StaticResource TextBlockAvatarMenuStyle}" Text="Thomas" FontSize="14"/>
-            </StackPanel>
-            
-            
+            </StackPanel>                      
         </Grid>        
         
         <!--<StackPanel x:Name="stackPanelAvatar" Grid.Row="2" Width="45"
