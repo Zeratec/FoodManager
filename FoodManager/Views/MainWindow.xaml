@@ -7,12 +7,7 @@
         mc:Ignorable="d"
         Title="Food Manager" Height="450" Width="800" WindowStartupLocation="CenterScreen">
 
-    <Grid Background="{StaticResource PrimaryBackgroundColor}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <ContentControl Grid.Column="0" Content="{Binding MenuViewModel}"/>
+    <Grid>
+        <ContentControl Content="{Binding CurrentView}"/>
     </Grid>
 </Window>

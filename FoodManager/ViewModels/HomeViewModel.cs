@@ -7,20 +7,19 @@ using System.Threading.Tasks;
 
 namespace FoodManager.ViewModels
 {
-    public class MainWindowViewModel : ViewModelBase
+    public class HomeViewModel : ViewModelBase
     {
         #region Variable
         #endregion Variable
 
         #region Constructor
-        public MainWindowViewModel()
-        {          
-            CurrentView = new ContainerAppViewModel(null);
+        public HomeViewModel()
+        {
+
         }
         #endregion Constructor
 
         #region Properties
-        public object CurrentView { get; set; }
         #endregion Properties
 
         #region Public Method

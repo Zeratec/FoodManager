@@ -33,12 +33,25 @@
             <SolidColorBrush x:Key="ActionIconColor" Color="#434344" />
 
             <!-- Ressources Images -->
-            <BitmapImage x:Key="avatar" UriSource="/Resources/Icons/AUBRET_Th.jpeg"/>
+            <BitmapImage x:Key="avatar" UriSource="/Resources/Icons/avatar_1.png"/>
             
             <!-- Resources Template -->
+            <DataTemplate x:Name="ContainerAppDataTemplate" DataType="{x:Type vm:ContainerAppViewModel}">
+                <v:ContainerAppView/>
+            </DataTemplate>
+            
             <DataTemplate x:Name="MenuDataTemplate" DataType="{x:Type vm:MenuViewModel}">
                 <v:MenuView/>
             </DataTemplate>
+
+            <DataTemplate x:Name="HomeDataTemplate" DataType="{x:Type vm:HomeViewModel}">
+                <v:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate x:Name="GraphicDataTemplate" DataType="{x:Type vm:GraphicViewModel}">
+                <v:GraphicView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
