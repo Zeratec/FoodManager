@@ -60,6 +60,7 @@
 
             <StackPanel x:Name="stackPanelRadioBtn" Grid.Row="1" Width="60">
                 <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Home" Tag="" Visibility="Visible" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Home}"/>
+                <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Add Defect" Tag="" Visibility="Visible" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Defect}"/>
                 <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Graphic" Tag="" Visibility="Visible" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Graphic}"/>
             </StackPanel>
 

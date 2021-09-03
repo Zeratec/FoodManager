@@ -34,6 +34,10 @@ namespace FoodManager.Commands
                 switch (viewType)
                 {
                     case ViewType.Home:
+                        _navigator.CurrentViewModel = null;
+                        break;
+
+                    case ViewType.Defect:
                         _navigator.CurrentViewModel = new HomeViewModel();
                         break;
 

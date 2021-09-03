@@ -11,6 +11,7 @@ namespace FoodManager.State.Navigators
     public enum ViewType
     {
         Home,
+        Defect,
         Graphic,
         Setting,
     }
