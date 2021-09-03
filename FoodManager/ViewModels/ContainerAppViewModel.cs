@@ -17,17 +17,6 @@ namespace FoodManager.ViewModels
         {
             Menu = new MenuViewModel();
         }
-
-        public ContainerAppViewModel(object selectedViewModel)
-        {
-            Menu = new MenuViewModel();
-
-            //_selectedViewModel = selectedViewModel;
-            //SelectedViewModel = _selectedViewModel;
-
-            _selectedViewModel = new HomeViewModel();
-            SelectedViewModel = _selectedViewModel;
-        }
         #endregion Constructor
 
         #region Properties
@@ -42,20 +31,6 @@ namespace FoodManager.ViewModels
             {
                 _menu = value;
                 OnPropertyChanged(nameof(Menu));
-            }
-        }
-
-        private object _selectedViewModel;
-        public object SelectedViewModel
-        {
-            get
-            {
-                return _selectedViewModel;
-            }
-            set
-            {
-                _selectedViewModel = value;
-                OnPropertyChanged(nameof(SelectedViewModel));
             }
         }
         #endregion Properties

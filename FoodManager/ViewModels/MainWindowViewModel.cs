@@ -15,7 +15,7 @@ namespace FoodManager.ViewModels
         #region Constructor
         public MainWindowViewModel()
         {          
-            CurrentView = new ContainerAppViewModel(null);
+            CurrentView = new ContainerAppViewModel();
         }
         #endregion Constructor
 

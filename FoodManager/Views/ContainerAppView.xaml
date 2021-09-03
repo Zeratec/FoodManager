@@ -14,6 +14,7 @@
         </Grid.ColumnDefinitions>
 
         <ContentControl Grid.Column="0" Content="{Binding Menu}"/>
-        <ContentControl Grid.Column="1" Content="{Binding SelectedViewModel, UpdateSourceTrigger=PropertyChanged}"/>
+        <!--<local:MenuView Grid.Column="0" DataContext="{Binding MenuViewModel}"/>-->
+        <ContentControl Grid.Column="1" Content="{Binding MenuViewModel.SelectedViewModel}"/>
     </Grid>
 </UserControl>
