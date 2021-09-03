@@ -40,10 +40,6 @@
                 <v:ContainerAppView/>
             </DataTemplate>
             
-            <DataTemplate x:Name="MenuDataTemplate" DataType="{x:Type vm:MenuViewModel}">
-                <v:MenuView/>
-            </DataTemplate>
-
             <DataTemplate x:Name="HomeDataTemplate" DataType="{x:Type vm:HomeViewModel}">
                 <v:HomeView/>
             </DataTemplate>

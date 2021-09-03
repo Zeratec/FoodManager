@@ -8,6 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid Background="red">
-        <TextBlock Text="Home"/>
+        <StackPanel>
+            <TextBlock Text="{Binding TextBlockTest}"/>
+            <Button Content="Increase by 1" Command="{Binding TestCommand}"/>
+        </StackPanel>
+        
     </Grid>
 </UserControl>

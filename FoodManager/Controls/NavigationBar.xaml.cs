@@ -1,5 +1,4 @@
-﻿using FoodManager.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FoodManager.Views
+namespace FoodManager.Controls
 {
     /// <summary>
-    /// Logique d'interaction pour MenuView.xaml
+    /// Logique d'interaction pour NavigationBar.xaml
     /// </summary>
-    public partial class MenuView : UserControl
+    public partial class NavigationBar : UserControl
     {
-        public MenuView()
+        public NavigationBar()
         {
             InitializeComponent();
-            DataContext = new MenuViewModel();
         }
     }
 }

@@ -1,9 +1,10 @@
-﻿<UserControl x:Class="FoodManager.Views.MenuView"
+﻿<UserControl x:Class="FoodManager.Controls.NavigationBar"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:FoodManager.Views"
+             xmlns:local="clr-namespace:FoodManager.Controls"
+             xmlns:nav="clr-namespace:FoodManager.State.Navigators"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="60">
 
@@ -13,7 +14,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid>
+        <Grid Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="*"/>
@@ -58,12 +59,12 @@
             </ToggleButton>
 
             <StackPanel x:Name="stackPanelRadioBtn" Grid.Row="1" Width="60">
-                <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Home" Tag="" Visibility="Visible" Command="{Binding menuCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
-                <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Graphic" Tag="" Visibility="Visible" Command="{Binding menuCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Home" Tag="" Visibility="Visible" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Home}"/>
+                <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Graphic" Tag="" Visibility="Visible" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Graphic}"/>
             </StackPanel>
 
             <StackPanel x:Name="stackPanelRadioBtnSetting" Grid.Row="2" Width="60">
-                <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Setting" Tag="" Visibility="Visible" Command="{Binding menuCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                <RadioButton Style="{StaticResource RadioButtonMenuStyle}" GroupName="choice" Content="Setting" Tag="" Visibility="Visible" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Setting}"/>
             </StackPanel>
 
             <Grid x:Name="gridAvatar" Grid.Row="3" Width="60">
