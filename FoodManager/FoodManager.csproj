@@ -11,11 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Resource Include="Resources\Icons\avatar_1.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Icons\avatar_1.png" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
